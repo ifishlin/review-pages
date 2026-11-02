@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>編劇與運鏡技巧</title>
+<style>
+:root{--bg:#f6f3ec;--card:#fffdf8;--ink:#2b2620;--mute:#7a7064;--line:#e2dccf;--soft:#efe9dc;
+--c1:#3b6aa0;--c2:#c2492f;--c3:#5e7d4a;--c4:#8a5a9e;--c5:#b07d1a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1a17;--card:#25221e;--ink:#ece6da;--mute:#a69c8e;--line:#3a352e;--soft:#2e2a25}}
+:root[data-theme="dark"]{--bg:#1c1a17;--card:#25221e;--ink:#ece6da;--mute:#a69c8e;--line:#3a352e;--soft:#2e2a25}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"PingFang TC","Heiti TC",sans-serif}
+main{max-width:1080px;margin:auto;padding:32px 16px 96px}
+h1{font-size:30px;margin:0 0 6px}h2{font-size:22px;margin:48px 0 12px}h3{margin:0;font-size:17px}
+.sub{color:var(--mute);margin:0 0 28px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.lead{border-left:5px solid var(--c2)}
+.lead p{margin:6px 0}
+svg text{fill:var(--ink);font:13px -apple-system,"PingFang TC",sans-serif}
+svg .mute{fill:var(--mute)}
+.chart{width:100%;height:auto;display:block}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--mute);margin-top:6px}
+.legend i{display:inline-block;width:22px;height:4px;border-radius:2px;vertical-align:middle;margin-right:6px}
+nav{position:sticky;top:0;z-index:2;background:var(--bg);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+nav button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:4px 12px;border-radius:99px;cursor:pointer}
+nav button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+nav input{flex:1 1 160px;font:inherit;font-size:14px;padding:4px 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.cat{margin-top:36px}
+.cat>header{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
+.cat>header span{color:var(--mute);font-size:14px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;align-self:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;border-top:4px solid var(--cc)}
+summary{cursor:pointer;padding:12px 14px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary small{display:block;color:var(--mute);font-size:13px}
+summary p{margin:6px 0 0;font-size:14px}
+details[open] summary{border-bottom:1px dashed var(--line)}
+.body{padding:10px 14px 14px;font-size:14px}
+.body dt{font-weight:700;color:var(--cc);margin-top:8px}
+.body dd{margin:2px 0 0}
+blockquote{margin:4px 0;padding:6px 10px;background:var(--soft);border-radius:6px;font-style:normal}
+.star{outline:3px solid var(--c2);outline-offset:2px}
+.tag{font-size:11px;background:var(--c2);color:#fff;border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center;font-size:13px}
+.shots svg{width:100%;height:auto;background:var(--soft);border-radius:4px}
+.hidden{display:none}
+.learn{display:grid;gap:14px}
+.learn h3{margin-bottom:8px}.learn ol{margin:0;padding-left:22px}
+.learn table{width:100%;border-collapse:collapse;font-size:14px}
+.learn th{text-align:left;color:var(--mute);font-weight:600;border-bottom:1px solid var(--line);padding:6px 8px}
+.learn td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top}
+.learn td:first-child{width:32%}
+@media (max-width:600px){.learn td:nth-child(2){display:none}.learn th:nth-child(2){display:none}}
+</style>
+</head>
+<body><main>
+<h1>編劇與運鏡技巧</h1>
+<p class="sub">火柴人 pipeline 用的小抄。每張卡片點開，可以看到原理、殭屍片的例句，還有在 EP1 怎麼用。</p>
+
+<section class="box lead">
+<h3>Slow Burn 屬於哪一類？</h3>
+<p><b>Slow Burn（慢燃）</b>屬於<b>「張力與情緒」</b>這一類，是一種<b>節奏策略</b>：它決定恐懼要「慢慢堆」還是「一次爆」。它的對手是 <b>Jump Scare（突然驚嚇）</b>。</p>
+<p>Slow Burn 是一個總策略，要靠其他類的技巧來執行：旁白用<b>輕描淡寫</b>、運鏡用<b>慢慢推近</b>、聲音用<b>越來越安靜</b>、結構用<b>升級</b>。</p>
+<svg class="chart" viewBox="0 0 900 270" role="img" aria-label="Slow Burn 與 Jump Scare 的張力曲線比較">
+  <line x1="60" y1="230" x2="870" y2="230" stroke="var(--mute)"/>
+  <line x1="60" y1="20" x2="60" y2="230" stroke="var(--mute)"/>
+  <text x="66" y="30" class="mute">張力 ↑</text><text x="800" y="252" class="mute">時間 →</text>
+  <path d="M60 215 L250 210 L255 40 L275 205 L480 212 L485 50 L505 208 L870 210" fill="none" stroke="var(--c1)" stroke-width="3"/>
+  <path d="M60 215 C250 205 380 170 520 135 C640 105 740 70 800 35 L812 225 L870 225" fill="none" stroke="var(--c2)" stroke-width="4"/>
+  <text x="262" y="36">「哇！」突然嚇</text>
+  <text x="470" y="185">腳印 → 咀嚼聲停了 → 鳥飛走 → 一片寂靜</text>
+  <text x="700" y="28">露臉 / 爆發</text>
+</svg>
+<div class="legend"><span><i style="background:var(--c2)"></i>Slow Burn：張力一路往上堆，觀眾越看越不安</span><span><i style="background:var(--c1)"></i>Jump Scare：平常很平，偶爾嚇一下，嚇完就沒了</span></div>
+</section>
+
+<h2>技巧分成五類</h2>
+<svg class="chart" viewBox="0 0 900 200" role="img" aria-label="五大類技巧的關係">
+  <rect x="330" y="10" width="240" height="44" rx="10" fill="var(--soft)" stroke="var(--line)"/>
+  <text x="450" y="38" text-anchor="middle" style="font-weight:700">一支讓人看完的影片</text>
+  <g id="nodes"></g>
+</svg>
+
+<nav id="nav"><button class="on" data-c="all">全部</button></nav>
+<div id="cats"></div>
+
+<h2>景別小抄：鏡頭離角色多近</h2>
+<div class="shots" id="shots"></div>
+
+<h2>去哪裡學</h2>
+<p class="sub" style="margin-bottom:12px">這頁的技巧大多出自下面這些書和課程。中文書名、付費課的講師名單有幾個沒逐一查證，買或報名前先確認。</p>
+<div class="learn">
+<section class="box"><h3>⭐ 先看這兩個</h3>
+<ol>
+<li><b>Pixar in a Box：The Art of Storytelling</b>（Khan Academy，免費，可開中文字幕）：皮克斯編劇和分鏡師教「故事 → 分鏡」，跟我們的流程一樣。</li>
+<li><b>《漫畫原來要這樣看》</b>（<i>Understanding Comics</i>，Scott McCloud）：靜態格子之間怎麼產生時間和情緒。我們的片子本質上就是「會唸的漫畫」。</li>
+</ol></section>
+<section class="box"><h3>📚 編劇和故事</h3>
+<table>
+<tr><th>書</th><th>作者</th><th>教什麼</th></tr>
+<tr><td>《先讓英雄救貓咪》<br><i>Save the Cat!</i></td><td>Blake Snyder</td><td>最好入門，把一部片拆成 15 個節拍。對應冷開場、觸發事件、中段反轉、高潮</td></tr>
+<tr><td>《故事的解剖》<br><i>Story</i></td><td>Robert McKee</td><td>編劇聖經：衝突、轉折、場景。對應升級、賭注、但是／所以</td></tr>
+<tr><td>《作家之路》<br><i>The Writer's Journey</i></td><td>Christopher Vogler</td><td>英雄旅程，冒險故事的骨架</td></tr>
+<tr><td>《希區考克與楚浮對話錄》</td><td>Truffaut</td><td>希區考克親自講炸彈理論（懸疑 vs 驚嚇）</td></tr>
+<tr><td>《寫作這回事》<br><i>On Writing</i></td><td>Stephen King</td><td>短句、不說破、慢燃</td></tr>
+</table></section>
+<section class="box"><h3>🎥 運鏡和剪輯</h3>
+<table>
+<tr><th>書</th><th>作者</th><th>教什麼</th></tr>
+<tr><td><i>The Five C's of Cinematography</i></td><td>Joseph Mascelli</td><td>景別、角度、連續性</td></tr>
+<tr><td>《眨眼之間》<br><i>In the Blink of an Eye</i></td><td>Walter Murch</td><td>什麼時候該切鏡頭，很薄</td></tr>
+</table></section>
+<section class="box"><h3>🎓 課程</h3>
+<table>
+<tr><th>課程</th><th>在哪</th><th>教什麼</th></tr>
+<tr><td>Pixar in a Box：The Art of Storytelling</td><td>Khan Academy，免費</td><td>角色、結構、分鏡，有練習作業</td></tr>
+<tr><td>Brandon Sanderson 寫作課</td><td>YouTube（BYU），免費</td><td>情節、伏筆、Try-Fail Cycle</td></tr>
+<tr><td>But / Therefore</td><td>YouTube，免費，幾分鐘</td><td>《南方四賤客》編劇 Trey Parker、Matt Stone 在 NYU 講的法則</td></tr>
+<tr><td>Lessons from the Screenplay</td><td>YouTube 頻道，免費</td><td>拿名片分析劇本</td></tr>
+<tr><td>Every Frame a Painting</td><td>YouTube 頻道，免費</td><td>運鏡和剪輯分析</td></tr>
+<tr><td>StudioBinder</td><td>YouTube＋網站，免費</td><td>景別、角度、運鏡、分鏡表的圖解</td></tr>
+<tr><td>MasterClass</td><td>付費</td><td>名人開課（編劇、懸疑、恐怖），名單請上網站確認</td></tr>
+<tr><td>Coursera</td><td>可免費旁聽</td><td>大學開的編劇、創意寫作系列課</td></tr>
+<tr><td>Hahow 好學校／Domestika</td><td>付費</td><td>中文、實作向的分鏡和動畫敘事課</td></tr>
+</table></section>
+<section class="box"><h3>建議順序</h3>
+<ol><li>Pixar in a Box：建立「故事 → 分鏡」的整體觀念，幾個小時。</li>
+<li>Sanderson 情節那幾堂：補伏筆、升級、Try-Fail。</li>
+<li>其他遇到問題再查。</li></ol></section>
+</div>
+</main>
+<script>
+const CATS = [
+ {id:"s", name:"一、故事結構", hint:"整集怎麼排", color:"var(--c1)"},
+ {id:"t", name:"二、張力與情緒", hint:"怎麼讓觀眾緊張、發笑", color:"var(--c2)"},
+ {id:"w", name:"三、旁白寫法", hint:"一句一句怎麼寫", color:"var(--c3)"},
+ {id:"c", name:"四、運鏡", hint:"一張圖怎麼拍", color:"var(--c4)"},
+ {id:"e", name:"五、剪輯與聲音", hint:"鏡頭怎麼接", color:"var(--c5)"},
+];
+// [類別, 中文, 英文, 一句話, 為什麼有效, 殭屍片例子, EP1 用法]
+const T = [
+ ["s","冷開場／鉤子","Cold Open / Hook","開頭先丟最刺激的一刻，再倒回去講。","前 10 秒決定觀眾要不要留下來。先讓他好奇「怎麼會這樣」，他就會一路看到答案。","You live on the 30th floor. Until tonight, that was the worst thing about your flat.","第一秒就被暴龍追，畫面定格：「這是你。你大概很好奇，自己怎麼會落到這個地步。」"],
+ ["s","觸發事件","Inciting Incident","打破平靜、讓故事開始的那件事。","在它之前一切正常，從它之後主角回不去了。觀眾要清楚感覺到「開始了」。","At 9:40, every phone in the building screams at once.","一個還是濕的腳印。"],
+ ["s","升級","Escalation","危機一次比一次大。","同樣強度的危險重複出現，觀眾會麻痺。每次都要更糟，才會一直緊張。","門外的殭屍：4 → 9 → 23。","成年暴龍 → 盜龍 → 艾伯塔龍 → 三角洲奔龍 → 青少年暴龍。"],
+ ["s","嘗試→失敗循環","Try-Fail Cycle","主角試一招，失敗，而且情況變得更糟。","失敗讓觀眾替主角著急，也讓最後的成功更有份量。","用濕毛巾擋煙成功了，但花掉了「你不該花的 4 加侖水」。","躲起來被聞到，裝死被鼻子頂，爬樹樹太矮。"],
+ ["s","但是／所以法則","But / Therefore","段落之間用「但是」或「所以」連接，不要用「然後」。","「然後」只是在列清單；「但是／所以」才是因果，故事才會往前推。這是《南方四賤客》編劇的名言。","停電了，<b>所以</b>水停了。你有水了，<b>但是</b>樓下著火了。","舊稿的毛病：然後講礦井，然後講拋物線。新稿：成年暴龍追不上你，<b>但是</b>草叢在動。"],
+ ["s","中段反轉","Midpoint Reversal","片子一半時，局勢突然翻轉。","避免中段變得無聊，給後半段一個新的方向。","敲牆聲：以為是危險，其實是隔壁的倖存者。","HERO 以為贏了，擺出勝利姿勢，結果草叢開始沙沙響。"],
+ ["s","高潮","Climax","最大的危機，最後的對決。","前面累積的張力全部在這裡釋放。","門終於被撞開，但你已經在四層樓上了。","被青少年暴龍逼到絕路。"],
+ ["s","懸念收尾","Cliffhanger","結尾吊住，不把話講完。","讓觀眾想點下一集。","She is already holding it, and it…","夜空中出現一顆越來越亮的星。"],
+ ["t","慢燃","Slow Burn / Building Dread","不對勁的細節一點一點累積，最後才爆。","想像力比畫面可怕。觀眾自己腦補的恐懼最大。","鄰居在走廊 → 手臂包著繃帶 → 站得很直 → 從凌晨三點就一直面對你的門。","腳印 → 咀嚼聲停了 → 鳥飛走 → 一片寂靜 → 暴龍才露臉。",true],
+ ["t","懸疑 vs 驚嚇","Suspense vs Surprise","希區考克的炸彈理論：讓觀眾先知道炸彈在桌下，主角卻不知道。","驚嚇只有一秒，懸疑可以撐十分鐘。關鍵是觀眾知道得比主角多。","觀眾比你先看到屋頂上的訊息。","先讓觀眾看到樹後的眼睛，HERO 卻還開心地在摸蕨類。"],
+ ["t","倒數計時","Ticking Clock","一個不斷變化的數字，持續施壓。","數字一變，觀眾立刻知道情勢在惡化，不用多解釋。","水：40 → 33 → 15 加侖；食物：11 天 → 8 天。","「牠離你 50 公尺……30……8。」"],
+ ["t","賭注","Stakes","讓觀眾清楚知道「失敗會怎樣」。","不知道代價，就不會緊張。","一個人一天要一加侖水，你只剩兩天。","「青少年暴龍最喜歡吃的，就是跟你一樣大的東西。」"],
+ ["t","緊繃→釋放","Tension & Release","緊張之後給一個笑點或喘息。","一直緊繃，觀眾會累、會麻痺；放鬆之後，下一次緊張才有效。","在屋頂睡了 4 小時。It feels like a holiday.","追逐之後，接 PROF 按暫停的搞笑段。"],
+ ["t","伏筆／回收","Setup / Payoff（契訶夫之槍）","前面放的東西，後面一定要用上。","回收的瞬間，觀眾會有「原來如此！」的爽感。","規則一「噪音是晚餐鈴」，後來被拿來丟鬧鐘引開殭屍。","段落 3 的礦井座標存進遙控器，結尾變成陷阱。"],
+ ["t","呼應","Callback","後面重提前面的畫面、聲音或句子。","讓觀眾覺得整集是一個完整的作品，而且有參與感。","最後一句「Do not trust the radio」回收了中段那個沒寫完的訊息。","結尾又聽到那一聲「……啪」。"],
+ ["t","重複笑點","Running Gag","同一個梗重複出現，每次多一點變化。","第一次好笑，第二次觀眾會期待，第三次一變化就爆笑。","—","PROF 每次按暫停，都擺出不同的怪姿勢。"],
+ ["t","三的法則","Rule of Three","前兩個正常，第三個轉折。","兩個建立規律，第三個打破它，就是笑點或重拳。","—","「老鼠走掉了。大老鼠死了。馬……啪。」"],
+ ["w","第二人稱現在式","Second-person present","用「你」，而且像正在發生。","觀眾直接變成主角，代入感最強。","You stand in the bathroom doorway holding a frying pan.","「你聽到樹枝斷了。」"],
+ ["w","斷奏短句","Staccato prose","一句一個動作，一句對一個畫面。","節奏像心跳，畫面跟著句子一格一格往前推。","Sky, wind, and a steel tank the size of a bus.","「很熱。很濕。蚊子很多。」"],
+ ["w","演出來，不要講出來","Show, Don't Tell","不說「很恐怖」，而是描述讓人害怕的細節。","觀眾自己得出結論，感受比被告知強十倍。","從頭到尾不出現「殭屍」兩個字。","不說「暴龍來了」，說「腳印還是濕的」。"],
+ ["w","輕描淡寫／冰山理論","Understatement / Iceberg","大事用平淡的語氣講，只露出冰山一角。","語氣越平靜，內容越可怕或越好笑。","By morning, the sirens have stopped. That is worse.","「至於最後變成什麼樣子，我們就不要想像了。」"],
+ ["w","收尾句","Button","每一段的最後一句要有力。","像打拳的最後一擊，讓段落有結束感，讓觀眾記住。","You were right about the water.","「大部分的人，就是這樣被吃掉的。」"],
+ ["w","冷面幽默","Deadpan","很荒謬的事，用一本正經的口氣講。","反差就是笑點。跟慢燃用的是同一種句型，差別只在收尾那句是笑點還是重拳。","Cold beans it is.","「你思考的第一件事是：為什麼這位教授有一台可以暫停時間的遙控器。他沒有要解釋。」"],
+ ["w","具體數字和細節","Specificity","用數字和比喻代替形容詞。","「很大」沒有感覺，「比你的浴缸還大」就有畫面。","3 m away, she opens hers. Red glasses.","「腳印比你的浴缸還大。」"],
+ ["c","推近","Push In","鏡頭慢慢靠近對象。","越推越近，觀眾越緊張，也知道「這裡是重點」。","—","HERO 發現腳印時，慢慢推到腳印上。"],
+ ["c","拉遠","Pull Out","鏡頭慢慢後退，露出全景。","用來揭露（原來周圍還有……），或讓角色顯得孤單。","—","HERO 以為安全，鏡頭一拉遠，露出背後一整排恐龍。"],
+ ["c","平移揭露","Pan / Reveal","鏡頭掃過場景，最後停在某個東西上。","觀眾的視線被帶著走，停下的那一刻就是答案。","—","從蕨類平移到樹後，停在一隻眼睛上。"],
+ ["c","晃動","Shake","畫面抖動。","衝擊、腳步震動、慌張。","—","暴龍的腳步聲 → 畫面跟著震一下。"],
+ ["c","低角度","Low Angle","從下往上拍。","對象顯得巨大、有威脅。","—","暴龍出場一律用低角度。"],
+ ["c","高角度","High Angle","從上往下拍。","對象顯得渺小、無助。","—","HERO 被逼到絕路時。"],
+ ["c","主觀鏡頭","POV","從某個角色的眼睛看出去。","觀眾直接變成那個角色。","從貓眼往外看走廊。","從暴龍的視角，看草叢裡發抖的 HERO。"],
+ ["e","剪輯節奏","Pacing","緊張時鏡頭短、快；平常長、慢。","剪輯速度直接控制觀眾的心跳。","—","追逐每格 1–2 秒，解說段每格 4–6 秒。"],
+ ["e","反應鏡頭","Reaction Shot","事情發生後，切到角色的表情。","觀眾看角色的反應，才知道該怎麼感受。這也是庫勒雪夫效應。","—","旁白講完「時速 53 公里」，切到 HERO 傻眼的臉。"],
+ ["e","硬切","Smash Cut","從安靜突然切到吵，或從吵突然切到安靜。","喜劇和恐怖都在用，反差最大。","—","「你安全了。」下一格直接一聲吼。"],
+ ["e","定格","Freeze Frame","畫面停在某個瞬間。","給觀眾時間看清楚，也可以拿來搞笑。","—","開場定格；PROF 按下暫停。"],
+ ["e","聲音先到","J-cut","畫面還沒切，下一場的聲音已經先進來。","讓轉場更順，也可以預告危險。","—","HERO 還在笑，遠方的腳步聲已經先傳來。"],
+ ["e","靜默","Silence","嚇人點之前，所有聲音突然消失。","人對「突然安靜」比對噪音更敏感。","By morning, the sirens have stopped. That is worse.","暴龍出現前，蟲鳴和環境音全部停掉。"],
+ ["e","形狀轉場","Match Cut","用形狀相似的畫面接到下一場。","轉場變得聰明、好記。","—","老鼠掉進井 → 同一個構圖換成暴龍掉進井。"],
+];
+const nav = document.getElementById("nav"), cats = document.getElementById("cats");
+CATS.forEach(c => {
+  const b = document.createElement("button"); b.textContent = c.name.slice(2); b.dataset.c = c.id; nav.append(b);
+  const sec = document.createElement("section"); sec.className = "cat"; sec.dataset.c = c.id; sec.style.setProperty("--cc", c.color);
+  sec.innerHTML = `<header><i class="dot" style="background:${c.color}"></i><h2 style="margin:0">${c.name}</h2><span>${c.hint}</span></header><div class="grid"></div>`;
+  T.filter(t => t[0] === c.id).forEach(t => {
+    const d = document.createElement("details"); if (t[7]) d.className = "star";
+    d.innerHTML = `<summary><h3>${t[1]}${t[7] ? '<span class="tag">本頁主角</span>' : ""}</h3><small>${t[2]}</small><p>${t[3]}</p></summary>
+      <dl class="body"><dt>為什麼有效</dt><dd>${t[4]}</dd><dt>殭屍片例子</dt><dd><blockquote>${t[5]}</blockquote></dd><dt>EP1 怎麼用</dt><dd>${t[6]}</dd></dl>`;
+    d.dataset.text = t.join(" ").replace(/<[^>]+>/g, "");
+    sec.querySelector(".grid").append(d);
+  });
+  cats.append(sec);
+});
+const search = document.createElement("input"); search.placeholder = "搜尋，例如：伏筆、推近"; nav.append(search);
+let current = "all";
+function apply() {
+  const q = search.value.trim();
+  document.querySelectorAll(".cat").forEach(s => {
+    let any = false;
+    s.querySelectorAll("details").forEach(d => { const ok = !q || d.dataset.text.includes(q); d.classList.toggle("hidden", !ok); any ||= ok; });
+    s.classList.toggle("hidden", (current !== "all" && s.dataset.c !== current) || !any);
+  });
+}
+nav.addEventListener("click", e => {
+  if (e.target.tagName !== "BUTTON") return;
+  nav.querySelectorAll("button").forEach(b => b.classList.toggle("on", b === e.target));
+  current = e.target.dataset.c; apply();
+});
+search.addEventListener("input", apply);
+// 五大類關係圖
+const g = document.getElementById("nodes"), NS = "http://www.w3.org/2000/svg";
+CATS.forEach((c, i) => {
+  const x = 20 + i * 176, y = 120;
+  g.insertAdjacentHTML("beforeend", `<line x1="450" y1="54" x2="${x + 78}" y2="${y}" stroke="var(--line)" stroke-width="2"/>
+    <rect x="${x}" y="${y}" width="156" height="56" rx="10" fill="var(--card)" stroke="${c.color}" stroke-width="2"/>
+    <text x="${x + 78}" y="${y + 24}" text-anchor="middle" style="font-weight:700">${c.name.slice(2)}</text>
+    <text x="${x + 78}" y="${y + 44}" text-anchor="middle" class="mute">${c.hint}</text>`);
+});
+// 景別示意：同一個火柴人，框的大小不同
+const SHOTS = [["大遠景","交代地點、主角渺小",0.18],["全景","整個人和動作",0.45],["中景","上半身和表情",0.9],["特寫","臉、情緒",1.9],["大特寫","眼睛、細節",4.2]];
+const man = `<circle cx="0" cy="-60" r="14" fill="#fff" stroke="#222" stroke-width="3"/><circle cx="-5" cy="-62" r="2" fill="#222"/><circle cx="5" cy="-62" r="2" fill="#222"/>
+  <line x1="0" y1="-46" x2="0" y2="-10" stroke="#222" stroke-width="3"/><line x1="0" y1="-38" x2="-16" y2="-22" stroke="#222" stroke-width="3"/><line x1="0" y1="-38" x2="16" y2="-22" stroke="#222" stroke-width="3"/>
+  <line x1="0" y1="-10" x2="-12" y2="14" stroke="#222" stroke-width="3"/><line x1="0" y1="-10" x2="12" y2="14" stroke="#222" stroke-width="3"/>`;
+document.getElementById("shots").innerHTML = SHOTS.map(([n, d, s]) => {
+  const cy = s > 1.5 ? -60 : s > 0.8 ? -40 : -20;
+  return `<figure><svg viewBox="-80 -45 160 90"><g transform="scale(${s}) translate(0 ${-cy})">${man}</g></svg><b>${n}</b><br><span style="color:var(--mute)">${d}</span></figure>`;
+}).join("");
+</script>
+</body></html>
